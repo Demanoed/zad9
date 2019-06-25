@@ -9,6 +9,7 @@ namespace Spiski
 {
     class Program
     {
+        #region Создает элементы списка
         private static Head MadeHead(int N)
         {
             Head list = new Head();
@@ -25,6 +26,8 @@ namespace Spiski
             }
             return list;
         }
+        #endregion
+        #region Сортирует элементы списка по двум спискам с положительными и отрицательными числами
         private static void MadeLists(Head head)
         {
             Point Pos = new Point();
@@ -56,6 +59,8 @@ namespace Spiski
             ColorMess.Magenta("\n Отрицательный список: ");
             WriteList(Neg);
         }
+        #endregion
+        #region Выводит список
         private static void WriteList(Point list)
         {
             if (list.Info != null)
@@ -72,6 +77,8 @@ namespace Spiski
             }
             else ColorMess.Red("Список пустой");
         }
+        #endregion
+        #region Выводит меню с выбором задачи и открывает функции для выполнения выбранной операции
         static void Main()
         {
             ColorMess.Yellow("\n Введите колличество элементов: ");
@@ -81,5 +88,6 @@ namespace Spiski
             MadeLists(head);
             Message.GoToBack();
         }
+        #endregion
     }
 }

@@ -10,6 +10,7 @@ namespace Spiski
     {
         Head info;
         Point next;
+        #region свойства
         public Head Info
         {
             get { return info; }
@@ -20,10 +21,13 @@ namespace Spiski
             get { return next; }
             set { next = value; }
         }
+        #endregion
+        #region Конструктор без параметров
         public Point()
         {
             info = null;
             next = null;
         }
+        #endregion
     }
 }

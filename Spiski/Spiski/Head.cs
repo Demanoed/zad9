@@ -10,6 +10,7 @@ namespace Spiski
     {
         int info;
         Head next;
+        #region свойства
         public int Info
         {
             get { return info; }
@@ -20,14 +21,19 @@ namespace Spiski
             get { return next; }
             set { next = value; }
         }
+        #endregion
+        #region Конструктор без параметров
         public Head()
         {
             info = default(int);
             next = null;
         }
+        #endregion
+        #region Преобразование в строку
         public override string ToString()
         {
             return info + " ";
         }
+        #endregion
     }
 }
